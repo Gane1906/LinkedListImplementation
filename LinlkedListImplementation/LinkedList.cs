@@ -57,5 +57,28 @@ namespace LinlkedListImplementation
             Console.WriteLine();
 
         }
+        public void InsertAtPosition(int position, int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+                this.head = newNode;
+            if (position == 0)
+            {
+                newNode.next = head;
+                head = newNode;
+                return;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newNode.next = prev.next;
+            prev.next = newNode;
+        }
     }
 }
