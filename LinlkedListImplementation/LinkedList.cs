@@ -80,5 +80,11 @@ namespace LinlkedListImplementation
             newNode.next = prev.next;
             prev.next = newNode;
         }
+        public void DeleteFirstNode()
+        {
+            if (this.head == null)
+                Console.WriteLine("Linked list is empty");
+            this.head = this.head.next;
+        }
     }
 }
