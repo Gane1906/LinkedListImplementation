@@ -27,6 +27,21 @@ namespace LinlkedListImplementation
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
+        public void AddReverseOrder(int data)
+        {
+            Node head;
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                this.head = newNode;
+                this.head.next = temp;
+            }
+        }
         public void Display()
         {
             Node temp = this.head;

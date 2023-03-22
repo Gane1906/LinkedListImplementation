@@ -7,9 +7,9 @@ namespace LinkedListImnplementation
         static void Main(String[] args)
         {
             LinkedList linkedList = new LinkedList();
-            linkedList.AddNode(56);
-            linkedList.AddNode(30);
-            linkedList.AddNode(70);
+            linkedList.AddReverseOrder(70);
+            linkedList.AddReverseOrder(30);
+            linkedList.AddReverseOrder(56);
             linkedList.Display();
         }
     }
