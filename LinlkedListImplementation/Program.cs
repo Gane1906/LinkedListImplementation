@@ -10,7 +10,9 @@ namespace LinkedListImnplementation
             linkedList.AddNode(56);
             linkedList.AddNode(30);
             linkedList.AddNode(70);
-            linkedList.SearchElement(30);
+            int position=linkedList.SearchElement(30);
+            linkedList.InsertAtPosition(position+1, 40);
+            linkedList.Display();
         }
     }
 }

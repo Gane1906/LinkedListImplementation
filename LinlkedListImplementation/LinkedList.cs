@@ -99,7 +99,7 @@ namespace LinlkedListImplementation
             }
             temp.next = null;
         }
-        public void SearchElement(int data)
+        public int SearchElement(int data)
         {
             Node node = this.head;
             int position = 0, c = 0;
@@ -108,10 +108,12 @@ namespace LinlkedListImplementation
                 if (node.data.Equals(data))
                 {
                     Console.WriteLine("The element " + data + " is found at " + position + " position");
+                    return position;
                 }
                 node = node.next;
                 position++;
             }
+            return position;
         }
     }
 }
