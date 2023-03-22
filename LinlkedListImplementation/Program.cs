@@ -11,7 +11,7 @@ namespace LinkedListImnplementation
             linkedList.AddNode(30);
             linkedList.AddNode(70);
             linkedList.Display();
-            linkedList.DeleteFirstNode();
+            linkedList.DeleteLastNode();
             linkedList.Display();
         }
     }

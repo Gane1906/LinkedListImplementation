@@ -86,5 +86,18 @@ namespace LinlkedListImplementation
                 Console.WriteLine("Linked list is empty");
             this.head = this.head.next;
         }
+        public void DeleteLastNode()
+        {
+            if (this.head == null)
+                Console.WriteLine("Linked list is empty");
+            if (head.next == null)
+                this.head = null;
+            Node temp = this.head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+        }
     }
 }
