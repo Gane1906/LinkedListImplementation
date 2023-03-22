@@ -1,5 +1,7 @@
 ﻿using LinlkedListImplementation;
 using System;
+using System.Collections.Generic;
+
 namespace LinkedListImnplementation
 {
     public class Program
@@ -13,6 +15,10 @@ namespace LinkedListImnplementation
             int position=linkedList.SearchElement(30);
             linkedList.InsertAtPosition(position+1, 40);
             linkedList.Display();
+            int searchDeleteElement = linkedList.SearchElement(40);
+            linkedList.DeleteParticularPosition(searchDeleteElement);
+            linkedList.Display();
+            
         }
     }
 }

@@ -115,5 +115,38 @@ namespace LinlkedListImplementation
             }
             return position;
         }
+        public void DeleteParticularPosition(int position)
+        {
+            Node temp = this.head;
+            if (position == 0)
+            {
+                this.head = temp.next;
+                return;
+            }
+            for (int i = 0; i < position - 1 && temp.next != null; i++)
+            {
+                temp = temp.next;
+            }
+            if (temp == null || temp.next == null)
+                return;
+            Node next = temp.next.next;
+            temp.next = next;
+            Size();
+        }
+        public void Size()
+        {
+            int count = 0;
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List is empty");
+            }
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("The size of linkedlist is: " + count); 
+        }
     }
 }
